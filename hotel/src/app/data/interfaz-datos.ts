@@ -1,8 +1,9 @@
 export interface hotelData {
+    id: string;
     img : string;
     nombre : string;
     descripcion : string;
-    ubicación : string;
+    ubicacion : string;
     precionoche :number
 
 }

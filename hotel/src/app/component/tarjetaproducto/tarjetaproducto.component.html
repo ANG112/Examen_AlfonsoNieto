@@ -1,13 +1,14 @@
-<p>tarjetaproducto works!</p>
 
-<div>
-    <img src="" alt="">
-    <div>
-        <p>nombre</p>
-        <p>descripcion</p>
-        <span>precio</span>
+
+<div class ="border rounded-xl shadow-xs">
+    <img [src]="getImagen()" alt="hotel.nombre" class="w-100 h-100 object-cover justify-center items-center mx-auto">
+    <div class="flex flex-col">
+        <h3 class="text-base font-bold text-center md:text-xl">{{hotel.nombre}}</h3>
+        <p class="text-base text-center md:text-xl">{{hotel.descripcion}}</p>
+        <p class="text-base text-center md:text-xl">{{hotel.ubicacion}}</p>
+        <span>Precio: ${{hotel.precionoche | number:'1.2-2'}}</span>
     </div>
-    <button>
-        Seleccionar
+    <button (click)="onAddFavoriteClick()" [disabled]="isFavorite" class="bg-slate-800 text-white p-3 cursor-pointer rounded-xl">
+    {{ isFavorite ? 'En Favoritos' : 'Añadir a Favoritos' }}
     </button>
 </div>
