@@ -10,5 +10,5 @@ import { NavComponent } from './component/nav/nav.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Buscador de hotel';
+  
 }
